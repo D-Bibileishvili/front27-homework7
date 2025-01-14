@@ -34,8 +34,21 @@ h1 {
 /* section style */
 
 section {
-  background-color: blueviolet;
+  background-color: rgb(211, 208, 23);
   height: 1000px;
+  animation-name: bg-change;
+  animation-duration: 5s;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition-timing-function: ease-in-out;
+}
+
+h2 {
+  font-size: 30px;
+  color: red;
+  padding-left: 30px;
+  padding-top: 100px;
 }
 
 .box {
@@ -45,7 +58,7 @@ section {
   background-color: aqua;
   padding: 10px;
   margin-left: 30px;
-  margin-top: 200px;
+  margin-top: 40px;
   position: relative;
   border-radius: 10px;
   /* background-image: url(images/Ford-Mustang1.jpg); */
@@ -69,22 +82,64 @@ section {
 }
 
 .box:nth-child(2) {
-  background-image: url(images/mustang2.jpg);
+  background-image: url(images/mustang3.jpg);
 }
 
 .box:nth-child(3) {
-  background-image: url(images/mustang3.jpg);
+  background-image: url(images/mustang5.jpg);
 }
 
 header:has(.container)::after {
   content: "🚗";
   font-size: 60px;
   position: absolute;
-  top: 45%;
-  left: 40%;
+  top: 80%;
+  left: 90%;
   transform: translate(-50%, -50%);
+  animation-name: logo-move;
+  animation-duration: 5s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition-timing-function: ease-in-out;
 }
 
-.box:hover {
-  width: 600px;
+.box:hover p {
+  font-size: 25px;
+  color: red;
+}
+
+.img1:hover {
+  background-image: url(images/mustang2.jpg);
+}
+
+.img2:hover {
+  background-image: url(images/mustang4.jpg);
+}
+
+.img3:hover {
+  background-image: url(images/mustang6.jpg);
+}
+
+.box {
+  transition-property: background-image;
+  transition-duration: 2s;
+}
+
+@keyframes bg-change {
+  from {
+    background-color: rgb(211, 208, 23);
+  }
+  to {
+    background-color: blueviolet;
+  }
+}
+
+@keyframes logo-move {
+  0% {
+    left: 90%;
+  }
+  100% {
+    left: 10%;
+  }
 }
