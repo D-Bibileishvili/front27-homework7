@@ -14,15 +14,77 @@ img {
   margin: 0 auto;
 }
 
+/* header style */
+
 header {
   background-color: darkgreen;
-  height: 150px;
-  margin-bottom: 200px;
+  height: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
 }
 
 h1 {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 80px;
   font-size: 40px;
   color: rgb(58, 3, 95);
+}
+
+/* section style */
+
+section {
+  background-color: blueviolet;
+  height: 1000px;
+}
+
+.box {
+  display: inline-block;
+  width: 500px;
+  min-height: 500px;
+  background-color: aqua;
+  padding: 10px;
+  margin-left: 30px;
+  margin-top: 200px;
+  position: relative;
+  border-radius: 10px;
+  /* background-image: url(images/Ford-Mustang1.jpg); */
+  background-size: cover;
+}
+
+.box p {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 20px);
+}
+
+.box:nth-child(1) {
+  background-image: url(images/Ford-Mustang1.jpg);
+}
+
+.box:nth-child(2) {
+  background-image: url(images/mustang2.jpg);
+}
+
+.box:nth-child(3) {
+  background-image: url(images/mustang3.jpg);
+}
+
+header:has(.container)::after {
+  content: "🚗";
+  font-size: 60px;
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.box:hover {
+  width: 600px;
 }
