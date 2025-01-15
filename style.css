@@ -143,3 +143,41 @@ header:has(.container)::after {
     left: 10%;
   }
 }
+
+@keyframes img1-move {
+  from {
+    right: 0;
+  }
+  to {
+    right: 50px;
+  }
+}
+
+@keyframes img3-move {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 50px;
+  }
+}
+
+.img1 {
+  /* right: 10px; */
+  animation-name: img1-move;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.img3 {
+  animation-name: img3-move;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
